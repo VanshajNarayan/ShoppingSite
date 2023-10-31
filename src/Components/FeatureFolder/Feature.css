@@ -1,0 +1,73 @@
+.feature{
+  background-color: rgba(231, 230, 230, 0.225);
+  padding: 2rem;
+}
+
+.feature .featureSection{
+  max-width: 100rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  padding: 1rem;
+}
+
+.feature .featureSection .firstBox{
+  background-color: #fff;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.feature .featureSection .categoriesbox{
+  position: relative;
+}
+
+.feature .featureSection figure img{
+  max-width: 30rem;
+  object-fit: contain;
+}
+
+.feature .featureSection .categories{
+  position: absolute;
+  top: 6%;
+  right: 6%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 2rem, 1.4rem 0 0;
+}
+
+
+.feature .featureSection .textpart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000;
+  max-width: 30rem;
+  margin-top: 1rem;
+}
+
+.feature .featureSection .textpart .itemsName{
+  color: #7843dbc8;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.feature .featureSection .textpart .itemsPrice{
+  font-size: 1.5rem;
+}
+
+@media(width < 360px){
+  .feature .featureSection{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
+  .feature .featureSection .categories{
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .feature .featureSection .textpart .itemsName{
+    font-size: 1rem;
+  }
+  .feature .featureSection .textpart .itemsPrice{
+    font-size: 1rem;
+  }
+}

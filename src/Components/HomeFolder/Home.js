@@ -1,3 +1,4 @@
+import Feature from "../FeatureFolder/Feature";
 import HeroSection from "../HeroFolder/HeroSection";
 import "./Home.css";
 
@@ -8,6 +9,7 @@ const Home = () => {
   return (
     <>
       <HeroSection storeName = {storeName} />
+      <Feature/>
     </>
   )
 };
