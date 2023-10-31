@@ -1,0 +1,54 @@
+.hero{
+  background-color: #fff;
+}
+
+.hero .heroSection{
+  max-width: 100rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  overflow: hidden;
+  align-items: center;
+}
+
+.hero .heroSection .textPart{
+  margin: 1rem;
+}
+
+.hero .heroSection .textPart .welcome{
+  color: #7843dbc8;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.hero .heroSection .textPart .storeName{
+  text-transform: capitalize;
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.hero .heroSection .textPart .HeroPara{
+  color: rgba(128, 128, 128, 0.767);
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.3rem;
+}
+
+.hero .heroSection .textPart .btn{
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1rem;
+  background-color: #7743DB;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.hero .heroSection .imagePart figure img{
+  max-width: 50rem;
+  object-fit: contain;
+  text-align: end;
+  margin: 1rem;
+}

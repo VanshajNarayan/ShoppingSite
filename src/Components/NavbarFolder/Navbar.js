@@ -31,7 +31,7 @@ const Navbar = () => {
           </ul>
         <div className="menu_icons" onClick={() => setShowHidden(!showHidden)} >
           {
-            showHidden ? <RxCross1 style={{fontSize:'2rem'}} /> : <AiOutlineMenu style={{fontSize:'2rem'}} />
+            showHidden ? <RxCross1 style={{fontSize:'2rem', cursor:'pointer'}} /> : <AiOutlineMenu style={{fontSize:'2rem', cursor:'pointer'}} />
           }          
         </div>
         </div>

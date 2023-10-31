@@ -22,6 +22,15 @@
   margin-top: 1rem;
 }
 
+.item li a:hover{
+  color: #000;
+  transform: all linear 0.5s;
+  -webkit-transform: all linear 0.5s;
+  -moz-transform: all linear 0.5s;
+  -ms-transform: all linear 0.5s;
+  -o-transform: all linear 0.5s;
+}
+
 .item li .cartIcon{
   position: relative;
   font-size: 2rem;

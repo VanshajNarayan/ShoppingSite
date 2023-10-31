@@ -1,9 +1,13 @@
+import HeroSection from "../HeroFolder/HeroSection";
 import "./Home.css";
 
 const Home = () => {
+  const storeName = {
+    name: 'Vanshaj Store',
+  };
   return (
     <>
-      <h2>Home Page</h2>
+      <HeroSection storeName = {storeName} />
     </>
   )
 };

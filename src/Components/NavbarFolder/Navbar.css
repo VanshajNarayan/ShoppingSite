@@ -34,6 +34,15 @@
   letter-spacing: 0.1rem;
 }
 
+.Nav .navbar_container .items li a:hover{
+  color: #7743DB;
+  transition: all linear 0.2s;
+  -webkit-transition: all linear 0.2s;
+  -moz-transition: all linear 0.2s;
+  -ms-transition: all linear 0.2s;
+  -o-transition: all linear 0.2s;
+}
+
 .Nav .navbar_container .items li .cartIcon{
   position: relative;
   font-size: 2rem;

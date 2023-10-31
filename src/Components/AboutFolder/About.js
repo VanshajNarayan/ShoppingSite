@@ -1,9 +1,13 @@
+import HeroSection from "../HeroFolder/HeroSection";
 import "./About.css";
 
 const About = () => {
+  const storeName = {
+    name: "Vanshaj Ecommerce",
+  };
   return (
     <>
-      <h2>About Page</h2>
+      <HeroSection storeName = {storeName} />
     </>
   )
 };
