@@ -1,0 +1,40 @@
+.mobileNav{
+  position: relative;
+}
+
+.item{
+  position: absolute;
+  list-style: none;
+  max-width: 100rem;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  background-image: linear-gradient(rgb(119, 67, 219), rgba(120, 67, 219, 0.732));
+}
+
+.item li .anchor{
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  margin-top: 1rem;
+}
+
+.item li .cartIcon{
+  position: relative;
+  font-size: 2rem;
+}
+
+.item li .cartIcon span{
+  font-size: 1.3rem;
+  position: absolute;
+  top: 0%;
+}
+
+@media(width > 768px){
+  .mobileNav{
+    display: none;
+  }
+}
