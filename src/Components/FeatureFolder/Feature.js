@@ -15,6 +15,10 @@ const Feature = () => {
   return (
     <>
       <section className="feature">
+        <div className="featureText">
+        <p className="check">check now!</p>
+        <h2 className="featureHeading">Our Feature Services</h2>
+        </div>
         <div className="featureSection">
 
           {
