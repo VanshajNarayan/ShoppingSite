@@ -20,9 +20,9 @@ const Footer = () => {
           <div className="thirdDiv div">
             <p style={{fontSize:'1.3rem', marginBottom:'1rem'}} >Follow Us</p>
             <div className="iconsGroup">
-              <a href="https://github.com/VanshajNarayan" rel="noreferrer" target="_blank"  style={{textDecoration:'none'}} > <BsGithub className="socialIcon" /> </a>
-              <a href="https://www.linkedin.com/in/vanshaj-narayan" rel="noreferrer" target="_blank"  style={{textDecoration:'none'}} > <BiLogoLinkedin className="socialIcon" /> </a>
-              <a href="https://github.com/VanshajNarayan" rel="noreferrer" target="_blank"  style={{textDecoration:'none'}} > <BsInstagram className="socialIcon" /> </a>      
+              <a href="https://github.com/VanshajNarayan" title="See Github Account" rel="noreferrer" target="_blank"  style={{textDecoration:'none'}} > <BsGithub className="socialIcon" /> </a>
+              <a href="https://www.linkedin.com/in/vanshaj-narayan" title="See LinkedIn Account" rel="noreferrer" target="_blank"  style={{textDecoration:'none'}} > <BiLogoLinkedin className="socialIcon" /> </a>
+              <a href="https://github.com/VanshajNarayan" title="See Instagram Account" rel="noreferrer" target="_blank"  style={{textDecoration:'none'}} > <BsInstagram className="socialIcon" /> </a>      
             </div>
           </div>
           <div className="fourthDiv div">
