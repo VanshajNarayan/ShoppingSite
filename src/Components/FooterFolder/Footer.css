@@ -1,0 +1,31 @@
+.footerSection{
+  background-color: #192655;
+}
+
+.footerSection .lastSection{
+  max-width: 100rem;
+  margin: 0 auto;
+  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.footerSection .footerBox{
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.footerSection .footerBox .div{
+  color: #fff;
+  margin: 1rem;
+}
+
+.footerSection .footerBox .div .iconsGroup .socialIcon{
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+  color: #7743DB;
+}
+
