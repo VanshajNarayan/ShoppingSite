@@ -1,5 +1,6 @@
 import Feature from "../FeatureFolder/Feature";
 import HeroSection from "../HeroFolder/HeroSection";
+import Service from "../ServiceFolder/Service";
 import "./Home.css";
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
     <>
       <HeroSection storeName = {storeName} />
       <Feature/>
+      <Service/>
     </>
   )
 };

@@ -1,0 +1,48 @@
+.serviceSection{
+  background-color: #fff;
+}
+
+.serviceSection .serviceBox{
+  max-width: 100rem;
+  margin: 0 auto;
+  color: #000;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+.serviceSection .serviceBox .firstBox, .serviceSection .serviceBox .thirdBox{
+  background-color: rgba(231, 230, 230, 0.225);
+  text-align: center;
+  padding: 2rem;
+  margin: 2rem;
+  display: grid;
+  place-items: center;
+}
+
+.serviceSection .serviceBox .firstBox .icons, .serviceSection .serviceBox .secondBox .icons, .serviceSection .serviceBox .thirdBox .icons{
+  color: #7743DB;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.serviceSection .serviceBox .firstBox .msg, .serviceSection .serviceBox .secondBox .msg, .serviceSection .serviceBox .thirdBox .msg{
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.serviceSection .serviceBox .secondBox{
+  text-align: center;
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.serviceSection .serviceBox .secondBox .secondFirstBox{
+  background-color: rgba(231, 230, 230, 0.225);
+  padding: 2rem;
+}
+
+.serviceSection .serviceBox .secondBox .secondSecondBox{
+  padding: 2rem;
+  margin-top: 2rem;
+  background-color: rgba(231, 230, 230, 0.225);
+}
