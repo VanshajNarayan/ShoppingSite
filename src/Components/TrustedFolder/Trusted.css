@@ -1,0 +1,31 @@
+.trustedSection{
+  background-color: rgba(231, 230, 230, 0.225);
+}
+
+.trustedSection .headingSection{
+  /* border: 2px solid brown; */
+  max-width: 100rem;
+  margin: 0 auto;
+  
+}
+
+.trustedSection .trustedBox{
+  /* border: 2px solid red; */
+  max-width: 100rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  padding: 2rem;
+}
+
+.trustedSection .trustedBox .firstCompany{
+  /* border: 2px solid blue; */
+  display: grid;
+  place-items: center;
+}
+
+.trustedSection .trustedBox .firstCompany img{
+  max-width: 20rem;
+  height: 50%;
+  object-fit: contain;
+}

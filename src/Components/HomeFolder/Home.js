@@ -1,7 +1,7 @@
 import Feature from "../FeatureFolder/Feature";
-import Footer from "../FooterFolder/Footer";
 import HeroSection from "../HeroFolder/HeroSection";
 import Service from "../ServiceFolder/Service";
+import Trusted from "../TrustedFolder/Trusted";
 import "./Home.css";
 
 const Home = () => {
@@ -13,7 +13,7 @@ const Home = () => {
       <HeroSection storeName = {storeName} />
       <Feature/>
       <Service/>
-      <Footer/>
+      <Trusted/>
     </>
   )
 };

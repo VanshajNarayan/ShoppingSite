@@ -7,6 +7,7 @@ import Home from "./Components/HomeFolder/Home";
 import Navbar from "./Components/NavbarFolder/Navbar";
 import Products from "./Components/ProductsFolder/Products";
 import SingleProducts from "./Components/SingleProductFolder/SingleProducts";
+import Footer from "./Components/FooterFolder/Footer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/singleProducts" element={<SingleProducts />} />
         </Routes>
+        <Footer/>
       </Router>
     </>
   );

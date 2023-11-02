@@ -33,7 +33,7 @@ const Footer = () => {
         <hr style={{marginTop:'2rem', marginBottom:'2rem'}} />
         <div className="lastSection">
           <p>&copy;2023 Vanshaj Narayan. All Rights Reserved</p>
-          <div className="anotherDiv">
+          <div className="anotherDiv" style={{marginBottom:'2rem'}} >
           <p>PRIVACY POLICY</p>
           <p>TERMS & CONDITIONS</p>
           </div>
