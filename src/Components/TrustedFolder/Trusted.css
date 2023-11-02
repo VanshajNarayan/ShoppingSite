@@ -1,16 +1,15 @@
 .trustedSection{
   background-color: rgba(231, 230, 230, 0.225);
+  padding: 2rem;
 }
 
 .trustedSection .headingSection{
-  /* border: 2px solid brown; */
   max-width: 100rem;
   margin: 0 auto;
   
 }
 
 .trustedSection .trustedBox{
-  /* border: 2px solid red; */
   max-width: 100rem;
   margin: 0 auto;
   display: grid;
@@ -19,7 +18,6 @@
 }
 
 .trustedSection .trustedBox .firstCompany{
-  /* border: 2px solid blue; */
   display: grid;
   place-items: center;
 }
