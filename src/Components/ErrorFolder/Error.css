@@ -1,0 +1,42 @@
+.errorSection{
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.errorSection .errorBox{
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.errorSection .errorBox .headingError{
+  font-size: 7rem;
+  font-weight: 800;
+}
+
+.errorSection .errorBox .errorMsg{
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 200;
+}
+
+.errorSection .errorBox .errorPara{
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: rgba(128, 128, 128, 0.767);
+}
+
+.errorSection .errorBtn{
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 0.7rem 2rem;
+  background-color: #7743DB;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

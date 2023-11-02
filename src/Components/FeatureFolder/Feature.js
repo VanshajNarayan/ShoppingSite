@@ -23,7 +23,7 @@ const Feature = () => {
 
           {
             featuredItems.map((data, index) => (
-              <NavLink to="/singleProducts" style={{textDecoration:'none'}} key={index} >
+              <NavLink to={`/singleProducts/${data.id}`} style={{textDecoration:'none'}} key={index} >
               
               <div className="firstBox">
                 <div className="categoriesbox">
