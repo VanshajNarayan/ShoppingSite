@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./SinglePage.css";
+import SingleTextPage from "./SingleTextPage";
 
 const SinglePage = ({ images }) => {
   const [imgArr] = images;
@@ -49,7 +50,9 @@ const SinglePage = ({ images }) => {
               
             </div>
           </div>
-          <div className="textBox"></div>
+          <div className="textBox">
+            <SingleTextPage/>
+          </div>
         </div>
       </section>
     </>

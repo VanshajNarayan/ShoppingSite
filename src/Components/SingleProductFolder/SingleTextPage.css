@@ -1,0 +1,68 @@
+.textBox_section p{
+  color: #000;
+  margin-top: 1rem;
+}
+
+.textBox_section .textIcons{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+}
+
+.textBox_section .cartBtn{
+  color: #fff;
+  background-color: blue;
+  padding: 0.7rem 2rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.textBox_section .textIcons .icons{
+  color: blue;
+  max-width: fit-content;
+  text-align: center;
+}
+
+.textBox_section .textIcons .icons .icon{
+  font-size: 1.5rem;
+}
+
+.textBox_section .updateQuantity{
+  color: #000;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.textBox_section .updateQuantity .quantityIcon{
+  font-size: 2.5rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.textBox_section .colorsbox{
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.textBox_section .colorsbox .colors{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.textBox_section .colorsbox .colors .color{
+  margin-left: 1rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 60%;
+  cursor: pointer;
+}
