@@ -15,6 +15,8 @@ const SingleProducts = () => {
 
   useEffect(() => {
     apiIdCalling();
+
+    // eslint-disable-next-line
   }, []);
 
   const ImgBox = apiId.map(items => items.image);

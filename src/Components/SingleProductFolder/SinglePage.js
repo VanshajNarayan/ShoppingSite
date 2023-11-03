@@ -3,7 +3,9 @@ import "./SinglePage.css";
 
 const SinglePage = ({ images }) => {
   const [imgArr] = images;
+  const data = imgArr?.slice(0, 1);
   const [selectImg, setSelectImg] = useState();
+  const [show, setShow] = useState(false);
   return (
     <>
       <section className="singlepage_Section">
@@ -17,18 +19,34 @@ const SinglePage = ({ images }) => {
                   alt={img.filename}
                   width="100%"
                   className="chooseImg"
-                  onClick={() => setSelectImg(img.url)}
+                  onClick={() => {
+                    setSelectImg(img.url);
+                    setShow(true);
+                  }}
                 />
               ))}
             </div>
             <div className="clickimage_Section">
-              <img
-                // src="https://images.pexels.com/photos/238541/pexels-photo-238541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                src={selectImg}
-                alt=""
-                width="100%"
-                className="clickImage"
-              />
+              {
+                show ? (
+                    <img
+                      src={selectImg}
+                      alt={selectImg}
+                      width="100%"
+                      className="clickImage"
+                    />
+                ) : (
+                  data?.map((items, index) => (
+                  <img
+                    key={index}
+                    src={items.url}
+                    alt={items.filename}
+                    width="100%"
+                    className="clickImage"
+                  />
+                )))
+              }
+              
             </div>
           </div>
           <div className="textBox"></div>
