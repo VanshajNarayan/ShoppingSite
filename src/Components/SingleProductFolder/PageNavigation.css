@@ -1,0 +1,16 @@
+.navigation_Section{
+  background-color: rgba(231, 230, 230, 0.225);
+}
+
+.navigation_Section .navigationBox{
+  padding: 1rem;
+}
+
+.navigation_Section .navigationHeading{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.navigation_Section .navigationHeading span{
+  color: #7843dbc8;
+}

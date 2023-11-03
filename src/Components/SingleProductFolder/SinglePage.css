@@ -1,0 +1,35 @@
+.singlepage_Section{
+  background-color: #000;
+}
+
+.singlepage_Section .singlepage_box{
+  border: 2px solid red;
+  max-width: 100rem;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+}
+
+.singlepage_Section .singlepage_box .imagebox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.singlepage_Section .singlepage_box .imagebox .imageSection .chooseImg{
+  display: block;
+  max-width: 12rem;
+  object-fit: contain;
+  margin-top: 1rem;
+}
+
+.singlepage_Section .singlepage_box .imagebox .clickimage_Section .clickImage{
+  max-width: 30rem;
+  object-fit: contain;
+  margin: 1rem;
+}
+
+.singlepage_Section .singlepage_box .imagebox, .singlepage_Section .singlepage_box .textBox{
+  border: 2px solid blue;
+  padding: 1rem
+};
