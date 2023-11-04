@@ -12,7 +12,7 @@
 
 .textBox_section .cartBtn{
   color: #fff;
-  background-color: blue;
+  background-color: #7743DB;
   padding: 0.7rem 2rem;
   margin-top: 1rem;
   font-size: 1.2rem;
@@ -23,13 +23,13 @@
 }
 
 .textBox_section .textIcons .icons{
-  color: blue;
   max-width: fit-content;
   text-align: center;
 }
 
 .textBox_section .textIcons .icons .icon{
   font-size: 1.5rem;
+  color: #7743DB;
 }
 
 .textBox_section .updateQuantity{
@@ -68,4 +68,8 @@
   height: 30px;
   border-radius: 60%;
   cursor: pointer;
+  -webkit-border-radius: 60%;
+  -moz-border-radius: 60%;
+  -ms-border-radius: 60%;
+  -o-border-radius: 60%;
 }

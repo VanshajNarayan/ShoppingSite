@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useGetData } from "../ContextApiFolder/ContextOne";
 import "./Feature.css";
+import FormatPrice from "../HelperFolder/FormatPrice";
 
 const Feature = () => {
   const data = useGetData();
@@ -38,7 +39,7 @@ const Feature = () => {
                 </div>
               <div className="textpart">
                 <p className="itemsName"> {data.name} </p>
-                <p className="itemsPrice"> {data.price} </p>
+                <p className="itemsPrice"> { <FormatPrice price = {data.price} /> } </p>
               </div>
             </div>
 

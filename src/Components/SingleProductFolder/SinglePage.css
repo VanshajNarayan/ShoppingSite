@@ -3,7 +3,6 @@
 }
 
 .singlepage_Section .singlepage_box{
-  border: 2px solid red;
   max-width: 100rem;
   margin: 2rem auto;
   display: grid;
@@ -31,6 +30,5 @@
 }
 
 .singlepage_Section .singlepage_box .imagebox, .singlepage_Section .singlepage_box .textBox{
-  border: 2px solid blue;
   padding: 1rem
 };
