@@ -24,7 +24,7 @@ const SingleProducts = () => {
   return (
     <>
       <PageNavigation titleData = {apiId} />
-      <SinglePage images = {ImgBox}  />
+      <SinglePage images = {ImgBox} apiId = {apiId}  />
     </>
   )
 };

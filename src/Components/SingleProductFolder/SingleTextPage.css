@@ -52,6 +52,10 @@
   align-items: center;
 }
 
+.textBox_section .colorsbox .colorpara{
+  margin-top: 0rem
+}
+
 .textBox_section .colorsbox .colors{
   display: flex;
   justify-content: space-between;

@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./SinglePage.css";
 import SingleTextPage from "./SingleTextPage";
 
-const SinglePage = ({ images }) => {
+const SinglePage = ({ images, apiId }) => {
   const [imgArr] = images;
   const data = imgArr?.slice(0, 1);
   const [selectImg, setSelectImg] = useState();
@@ -51,7 +51,9 @@ const SinglePage = ({ images }) => {
             </div>
           </div>
           <div className="textBox">
-            <SingleTextPage/>
+            {
+              apiId.map((data, index) => <SingleTextPage key={index} apiId = {data} /> )
+            }
           </div>
         </div>
       </section>

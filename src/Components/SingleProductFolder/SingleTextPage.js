@@ -3,7 +3,7 @@ import { TbTruckDelivery, TbReplace } from "react-icons/tb";
 import { PiGrainsBold } from "react-icons/pi";
 import { useState } from "react";
 
-const SingleTextPage = () => {
+const SingleTextPage = ({apiId}) => {
   const [quantity, setQuantity] = useState(1);
 
   const handleMinus = () => {
@@ -21,17 +21,14 @@ const SingleTextPage = () => {
   return (
     <>
       <section className="textBox_section">
-        <p className="itemsName">Iphone X</p>
-        <p>4.8</p>
+        <p className="itemsName"> {apiId.name} </p>
+        <p> {apiId.stars} </p>
+        <p>MRP:<span style={{textDecoration: 'line-through'}} > {apiId.price+2500} </span> </p>
         <p>
-          Deal of the day : <span>400000</span>
+          Deal of the day : <span> {apiId.price} </span>
         </p>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis
-          voluptatibus sapiente architecto quod voluptate porro rerum hic
-          voluptates veniam, fugit, provident recusandae quas tempore? Iure iste
-          mollitia tenetur accusantium, dolorem, corrupti nam sunt asperiores a
-          voluptas perferendis fugit, repellendus ipsam!
+          {apiId.description}
         </p>
         <div className="textIcons">
           <div className="firstIcons icons">
@@ -52,16 +49,18 @@ const SingleTextPage = () => {
           </div>
         </div>
         <hr />
-        <p>Available: <span>In Stock</span> </p>
-        <p>ID: <span>yuytyutiutitit</span> </p>
-        <p style={{marginBottom:'1rem'}} >Brand: <span>samsung</span> </p>
+        <p>Available: <span> {apiId.stock > 0 && apiId.stock} </span> </p>
+        <p>ID: <span> {apiId.id} </span> </p>
+        <p style={{ marginBottom: '1rem' }} >Brand: <span>{apiId.company}</span> </p>
         <hr />
         <div className="colorsbox">
-          <p style={{marginTop:'0'}}>Colors:</p>
+          <p className="colorpara" >Colors:</p>
           <div className="colors">
-            <div style={{backgroundColor:'#000'}} className="color"></div>
-            <div style={{backgroundColor:'#000'}} className="color"></div>
-            <div style={{backgroundColor:'#000'}} className="color"></div>
+            {
+              apiId.colors.map((clr, index) => (
+                <div key={index} style={{backgroundColor:`${clr}`}} className="color"></div>
+              ))
+            }
           </div>
         </div>
         <div className="updateQuantity">
