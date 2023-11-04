@@ -21,13 +21,13 @@ const SingleTextPage = ({apiId}) => {
   return (
     <>
       <section className="textBox_section">
-        <p className="itemsName"> {apiId.name} </p>
-        <p> {apiId.stars} </p>
-        <p>MRP:<span style={{textDecoration: 'line-through'}} > {apiId.price+2500} </span> </p>
-        <p>
+        <p className="itemsName" style={{marginBottom: '1rem'}} > {apiId.name} </p>
+        <p style={{marginBottom: '1rem'}} > {apiId.stars} </p>
+        <p style={{marginBottom: '1rem'}} >MRP:<span style={{textDecoration: 'line-through'}} > {apiId.price+2500} </span> </p>
+        <p style={{marginBottom: '1rem'}} >
           Deal of the day : <span> {apiId.price} </span>
         </p>
-        <p>
+        <p style={{marginBottom: '1rem'}} >
           {apiId.description}
         </p>
         <div className="textIcons">
@@ -48,9 +48,9 @@ const SingleTextPage = ({apiId}) => {
             <p>2 Years Warranty</p>
           </div>
         </div>
-        <hr />
-        <p>Available: <span> {apiId.stock > 0 && apiId.stock} </span> </p>
-        <p>ID: <span> {apiId.id} </span> </p>
+        <hr style={{marginBottom: '1rem'}} />
+        <p style={{marginBottom: '1rem'}} >Available: <span> {apiId.stock > 0 && apiId.stock} </span> </p>
+        <p style={{marginBottom: '1rem'}} >ID: <span> {apiId.id} </span> </p>
         <p style={{ marginBottom: '1rem' }} >Brand: <span>{apiId.company}</span> </p>
         <hr />
         <div className="colorsbox">
