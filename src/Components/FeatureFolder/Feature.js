@@ -1,7 +1,6 @@
-import { NavLink } from "react-router-dom";
 import { useGetData } from "../ContextApiFolder/ContextOne";
 import "./Feature.css";
-import FormatPrice from "../HelperFolder/FormatPrice";
+import FeatureGallery from "./FeatureGallery";
 
 const Feature = () => {
   const data = useGetData();
@@ -22,30 +21,7 @@ const Feature = () => {
         </div>
         <div className="featureSection">
 
-          {
-            featuredItems.map((data, index) => (
-              <NavLink to={`/singleProducts/${data.id}`} style={{textDecoration:'none'}} key={index} >
-              
-              <div className="firstBox">
-                <div className="categoriesbox">
-              <figure>
-              <img
-                src={data.image}
-                alt="products"
-                width="100%"
-                />
-              </figure>
-              <span className="categories" style={{color:"black"}} > {data.category} </span>
-                </div>
-              <div className="textpart">
-                <p className="itemsName"> {data.name} </p>
-                <p className="itemsPrice"> { <FormatPrice price = {data.price} /> } </p>
-              </div>
-            </div>
-
-            </NavLink>
-            ))
-          }
+          <FeatureGallery productApi = {featuredItems} />
           
         </div>
       </section>
