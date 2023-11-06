@@ -1,11 +1,15 @@
 import { useState } from "react";
 import "./SelectOption.css";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { useGetDispatch } from "../ContextApiFolder/ContextOne";
+import { useSecondData } from "../ContextApiFolder/ContextTwo";
 
 const SelectOption = ({options}) => {
+  const secondState = useSecondData();
   const [showHidden, setShowHidden] = useState(false);
   // const alphabeticalOption = ["lowPrice", "highPrice", "Price(a-z)", "Price(z-a)"];
   const [option, setOption] = useState("PriceSort");
+  const dispatch = useGetDispatch();
   return (
     <>
       <section className="selectSection">
@@ -28,7 +32,13 @@ const SelectOption = ({options}) => {
           <ul onClick={() => setShowHidden(false)} >
             {
                 options.map((lists, index) => (
-                <li key={index} onClick={() => setOption(lists)} >
+                  <li
+                    key={index}
+                    onClick={() => {
+                      setOption(lists);
+                      dispatch({ type: "PriceFilter", payload: {lists:lists, secondState:secondState} });
+                    }}
+                  >
                   {lists}
                 </li>
               ))

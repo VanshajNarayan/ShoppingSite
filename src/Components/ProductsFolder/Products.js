@@ -1,16 +1,19 @@
-import { useGetData } from "../ContextApiFolder/ContextOne";
+import { useGetData, useGetDispatch } from "../ContextApiFolder/ContextOne";
 import FeatureGallery from "../FeatureFolder/FeatureGallery";
 import "./Products.css";
 import "../FeatureFolder/Feature.css";
 import SelectOption from "./SelectOption";
 import Category from "./Category";
+import { useState } from "react";
 
 const Products = () => {
+  const [inputValue, setInputValue] = useState('');
   const stateData = useGetData();
   const { allApiData } = stateData;
   const alphabeticalOption = ["lowPrice", "highPrice", "Price(a-z)", "Price(z-a)"];
-  const companyLists = ["All", "Apple", "samsung", "Dell", "Nokia", "Asus", "Lenova", "Rolex"];
+  const companyLists = ["All", "Apple", "Samsung", "Dell", "Nokia", "Asus", "Lenova", "Rolex"];
   const colorsList = ["#ff0000", "#000000", "#CDD0D0", "#22D3EF", "#000"];
+  const dispatch = useGetDispatch();
   return (
     <>
       <section className="productSection">
@@ -21,7 +24,17 @@ const Products = () => {
             <div className="selectFirstSection">
 
             <div className="searchSection">
-              <input type="search" name="search" id="searchInput" autoComplete="off" placeholder="Search Products" />
+                <input
+                  type="search"
+                  id="searchInput"
+                  autoComplete="off"
+                  placeholder="Search Products"
+                  value={inputValue}
+                  onChange={(e) => {
+                    setInputValue(e.target.value);
+                    dispatch({ type: "searchItems", payload: inputValue });
+                  } }
+                />
             </div>
 
             <div className="categorySection">
