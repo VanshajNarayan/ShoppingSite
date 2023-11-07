@@ -4,11 +4,10 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import { useGetDispatch } from "../ContextApiFolder/ContextOne";
 import { useSecondData } from "../ContextApiFolder/ContextTwo";
 
-const SelectOption = ({options}) => {
+const SelectOption = ({options, heading}) => {
   const secondState = useSecondData();
   const [showHidden, setShowHidden] = useState(false);
-  // const alphabeticalOption = ["lowPrice", "highPrice", "Price(a-z)", "Price(z-a)"];
-  const [option, setOption] = useState("PriceSort");
+  const [option, setOption] = useState(heading.name);
   const dispatch = useGetDispatch();
   return (
     <>

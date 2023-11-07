@@ -114,6 +114,68 @@ export const FirstReducerFx = (state, action) => {
         };
       };
 
+      // ! color logic:-
+      // eslint-disable-next-line
+    case "allClr":
+      if (action.payload.text.textContent === "All") {
+        const allClrdata = action.payload.secondState.secondAllApiData;
+        return {
+          ...state,
+          allApiData: allClrdata,
+        };
+      };
+
+      // eslint-disable-next-line
+    case "colorLogic":
+      if (action.payload.clr === "#ff0000") {
+        const ff0000Data = action.payload.secondState.secondAllApiData.filter((items) => items.colors.includes(action.payload.clr));
+        return {
+          ...state,
+          allApiData: ff0000Data,
+        }
+      };
+
+      if (action.payload.clr === "#000000") {
+        const data000000 = action.payload.secondState.secondAllApiData.filter((items) => items.colors.includes(action.payload.clr));
+        return {
+          ...state,
+          allApiData: data000000,
+        }
+      };
+
+      if (action.payload.clr === "#CDD0D0") {
+        const CDD0D0Data = action.payload.secondState.secondAllApiData.filter((items) => items.colors.includes(action.payload.clr));
+        return {
+          ...state,
+          allApiData: CDD0D0Data,
+        }
+      };
+
+      if (action.payload.clr === "#22D3EF") {
+        const data22D3EF = action.payload.secondState.secondAllApiData.filter((items) => items.colors.includes(action.payload.clr));
+        return {
+          ...state,
+          allApiData: data22D3EF,
+        }
+      };
+
+      if (action.payload.clr === "#000") {
+        const data000 = action.payload.secondState.secondAllApiData.filter((items) => items.colors.includes(action.payload.clr));
+        return {
+          ...state,
+          allApiData: data000,
+        }
+      };      
+
+      // ! clear Button:-
+      // eslint-disable-next-line
+    case "clearFilter":
+      const clearBtnData = action.payload.secondAllApiData;
+      return {
+        ...state,
+        allApiData: clearBtnData,
+      };
+
       // ! Search Functionality:-
       // eslint-disable-next-line
     case "searchItems":
@@ -131,7 +193,57 @@ export const FirstReducerFx = (state, action) => {
       };
 
       // eslint-disable-next-line
-    default: 
+    case "categoryFilter":
+      if (action.payload.categy === "All") {
+        const allCategoryData = action.payload.secondState.secondAllApiData;
+        return {
+          ...state,
+          allApiData: allCategoryData,
+        }
+      };
+
+      if (action.payload.categy === "Mobile") {
+        const mobileCategory = action.payload.secondState.secondAllApiData.filter((items) => items.category.toLowerCase() === action.payload.categy.toLowerCase());
+        return {
+          ...state,
+          allApiData: mobileCategory,
+        }
+      };
+
+      if (action.payload.categy === "Laptop") {
+        const laptopCategory = action.payload.secondState.secondAllApiData.filter((items) => items.category.toLowerCase() === action.payload.categy.toLowerCase());
+        return {
+          ...state,
+          allApiData: laptopCategory,
+        }
+      };
+
+      if (action.payload.categy === "Computer") {
+        const computerCategory = action.payload.secondState.secondAllApiData.filter((items) => items.category.toLowerCase() === action.payload.categy.toLowerCase());
+        return {
+          ...state,
+          allApiData: computerCategory,
+        }
+      };
+
+      if (action.payload.categy === "Accessories") {
+        const accessoriesCategory = action.payload.secondState.secondAllApiData.filter((items) => items.category.toLowerCase() === action.payload.categy.toLowerCase());
+        return {
+          ...state,
+          allApiData: accessoriesCategory,
+        }
+      };
+
+      if (action.payload.categy === "Watch") {
+        const watchCategory = action.payload.secondState.secondAllApiData.filter((items) => items.category.toLowerCase() === action.payload.categy.toLowerCase());
+        return {
+          ...state,
+          allApiData: watchCategory,
+        }
+      };
+
+      // eslint-disable-next-line
+    default : 
       return state;
   }
 };
