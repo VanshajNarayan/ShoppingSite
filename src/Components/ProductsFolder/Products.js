@@ -65,7 +65,7 @@ const Products = () => {
                 <div className="colorheading">
                   <p
                     style={{
-                      color: "#fff",
+                      color: "#000",
                       fontSize: "1.5rem",
                       fontWeight: "600",
                       margin: "1rem 0",
@@ -74,7 +74,7 @@ const Products = () => {
                   </p>
                 </div>
                 <div className="colorBox">
-                  <p style={{ color: "#fff", fontSize: "1.3rem" }} onClick= {(e) => dispatch({type:'allClr', payload:{text:e.target, secondState:secondState}})} >All</p>
+                  <p style={{ color: "#000", fontSize: "1.3rem" }} onClick= {(e) => dispatch({type:'allClr', payload:{text:e.target, secondState:secondState}})} >All</p>
                   {colorsList.map((clr, index) => (
                     <div
                       key={index}
@@ -113,7 +113,7 @@ const Products = () => {
 
           <div className="photoGalleyBox">
             <div className="firstSection">
-              <p style={{ fontSize: "1.5rem", marginBottom: "0.5rem" }}>
+              <p style={{ fontSize: "1.5rem", marginBottom: "0.5rem", color:'#000' }}>
                 {allApiData.length} total products
               </p>
               <div className="optionSelect">

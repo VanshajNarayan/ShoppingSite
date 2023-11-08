@@ -17,6 +17,15 @@ export const FirstReducerFx = (state, action) => {
         featureApiData: featuredItems,
       };
 
+      // eslint-disable-next-line
+    case "Add to Cart":
+      const baskets = [...state.cartBucket, action.payload];
+      return {
+        ...state,
+        cartBucket: baskets,
+      };
+
+      // eslint-disable-next-line
     case "PriceFilter":
       if (action.payload.lists === "lowPrice") {
         const lowestPrice = state.allApiData.sort((a, b) => a.price - b.price);

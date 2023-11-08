@@ -12,6 +12,7 @@ export const Provider = ({ children }) => {
     loading: "false",
     allApiData: [],
     featureApiData : [],
+    cartBucket : [],
   };
 
   const [state, dispatch] = useReducer(FirstReducerFx, initialState);

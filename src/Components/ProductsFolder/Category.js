@@ -10,7 +10,7 @@ const Category = () => {
     <>
       <div className="categorybox">
         <div className="categoryHeading">
-          <p style={{fontSize:'1.5rem', color:'#fff', fontWeight:'600'}} >Category</p>
+          <p style={{fontSize:'1.5rem', color:'#000', fontWeight:'600'}} >Category</p>
         </div>
         <div className="categoryLists">
           <ul type="none">

@@ -1,22 +1,19 @@
 .productSection{
-  background-color: #000;
+  background-color: #fff;
 }
 
 .productSection .feature{
-  border: 2px solid red;
   max-width: 100rem;
   margin: 2rem auto;
 }
 
 .productSection .feature .selectOptionBox{
-  border: 2px solid blue;
   margin-bottom: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 }
 
 .productSection .feature .selectOptionBox .selectFirstSection{
-  border: 2px solid green;
   margin: 1rem;
 }
 
@@ -27,17 +24,14 @@
 }
 
 .productSection .feature .selectOptionBox .selectFirstSection .categorySection{
-  border: 2px solid brown;
   margin: 1rem 0;
 }
 
 .productSection .feature .selectOptionBox .selectSecondSection{
-  border: 2px solid greenyellow;
   margin: 1rem;
 }
 
 .productSection .feature .selectOptionBox .selectSecondSection .colorsSection{
-  /* border: 2px solid brown; */
   margin-bottom: 1rem;
 }
 
@@ -56,12 +50,11 @@
   border-radius: 60%;
 }
 
-.productSection .feature .photoGalleyBox{
+/* .productSection .feature .photoGalleyBox{
   border: 2px solid rgb(255, 162, 0);
-}
+} */
 
 .productSection .feature .photoGalleyBox .firstSection{
-  border: 2px solid brown;
   color: #fff;
   max-width: 100rem;
   margin: 1rem auto;

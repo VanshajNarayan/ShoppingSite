@@ -1,8 +1,10 @@
 import "./MobileNavbar.css";
 import { NavLink } from "react-router-dom";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { useGetData } from "../ContextApiFolder/ContextOne";
 
 const MobileNavbar = ({showHidden, setShowHidden}) => {
+  const state = useGetData();
   return (
     <>
     <div className="mobileNav">
@@ -21,7 +23,7 @@ const MobileNavbar = ({showHidden, setShowHidden}) => {
         </li>
         <li>
           <NavLink className="cartIcon anchor" to="/cart">
-            <AiOutlineShoppingCart /> <span>0</span>
+            <AiOutlineShoppingCart /> <span> {state.cartBucket.length} </span>
           </NavLink>
         </li>
       </ul>

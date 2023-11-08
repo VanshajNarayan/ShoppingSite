@@ -4,9 +4,11 @@ import { AiOutlineMenu, AiOutlineShoppingCart } from "react-icons/ai";
 import { RxCross1 } from "react-icons/rx";
 import { useState } from "react";
 import MobileNavbar from "./MobileNavbar";
+import { useGetData } from "../ContextApiFolder/ContextOne";
 
 const Navbar = () => {
   const [showHidden, setShowHidden] = useState(false);
+  const state = useGetData();
   return (
     <>
       <nav className="Nav">
@@ -26,7 +28,7 @@ const Navbar = () => {
               <NavLink to="/contact">CONTACT</NavLink>
             </li>
             <li>
-              <NavLink className="cartIcon" to="/cart"> <AiOutlineShoppingCart/> <span>0</span> </NavLink>
+              <NavLink className="cartIcon" to="/cart"> <AiOutlineShoppingCart/> <span> {state.cartBucket.length} </span> </NavLink>
             </li>
           </ul>
         <div className="menu_icons" onClick={() => setShowHidden(!showHidden)} >
