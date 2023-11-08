@@ -1,0 +1,121 @@
+.cartSection{
+  background-color: #fff;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+}
+
+.cartSection .totalBox{
+  max-width: 100rem;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.cartSection .cartBox{
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.cartSection .totalBox .totalDetail{
+  background-color: rgba(231, 230, 230, 0.225);
+  max-width: fit-content;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.cartSection .totalBox .totalDetail p{
+  color: #000000b9;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin: 1.4rem;
+}
+
+.cartSection .totalBox .totalDetail p span{
+  color: #000;
+  font-weight: 700;
+}
+
+.cartSection .cartBox .cartHeadingBox{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  padding: 0.5rem;
+}
+
+.cartSection .cartBox .cartItemsBox{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  padding: 0.5rem;
+}
+
+.cartSection .cartBox .cartspageBtns{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cartSection .cartBox .cartspageBtns .cartBtn{
+  color: #fff;
+  background-color: blue;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  margin: 1.5rem;
+  cursor: pointer;
+}
+
+.cartSection .cartBox .cartItemsBox .gridCenter{
+  display: grid;
+  place-items: center;
+}
+
+.cartSection .cartBox .cartHeadingBox .cartHeading{
+  color: #000;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.cartSection .cartBox .cartItemsBox .cartItems{
+  color: #000;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.cartSection .cartBox .cartItemsBox .cartItemsOne{
+  color: #000;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr));
+  place-items: center;
+}
+
+.cartSection .cartBox .cartItemsBox .cartItemsOne .ItemsImage img{
+  max-width: 10rem;
+  object-fit: contain;
+}
+
+.cartSection .cartBox .cartItemsBox .cartItemsOne .itemNameAndColor .colorbox .color{
+  max-width: 2rem;
+  height: 2rem;
+  border-radius: 80%;
+  margin-top: 0.7rem;
+  margin-left: 1.5rem;
+}
+
+@media(width < 500px){
+  .cartSection .cartBox .cartspageBtns{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

@@ -8,18 +8,24 @@ import FormatPrice from "../HelperFolder/FormatPrice";
 import { useGetDispatch } from "../ContextApiFolder/ContextOne";
 
 const SingleTextPage = ({apiId}) => {
-  const [quantity, setQuantity] = useState(1);
+  let [quantity, setQuantity] = useState(1);
 
   const handleMinus = () => {
     if (quantity > 1) {
-      setQuantity(quantity - 1);
+      setQuantity(--quantity);
+      apiId.ItemQuatity = quantity;
     }
   };
 
   const handlePlus = () => {
     if (quantity < 5) {
-      setQuantity(quantity + 1);
+      setQuantity(++quantity);
+      apiId.ItemQuatity = quantity;
     }
+  };
+
+  if (quantity === 1) {
+    apiId.ItemQuatity = quantity;
   };
 
   const ratings = Array.from({ length: 5 }, (_, index) => {
@@ -35,6 +41,12 @@ const SingleTextPage = ({apiId}) => {
   });
 
   const dispatch = useGetDispatch();
+
+  const handleColor = (clr) => {
+    if (apiId.colors.includes(clr)) {
+      apiId.colors = clr;
+    };
+  };
 
   return (
     <>
@@ -75,9 +87,11 @@ const SingleTextPage = ({apiId}) => {
           <p className="colorpara" >Colors:</p>
           <div className="colors">
             {
-              apiId.colors.map((clr, index) => (
-                <div key={index} style={{backgroundColor:`${clr}`}} className="color"></div>
-              ))
+              typeof apiId.colors !== "string" ? 
+              (apiId?.colors.map((clr, index) => (
+                <div key={index} style={{backgroundColor:`${clr}`}} onClick={() => handleColor(clr)} className="color"></div>
+              )))
+              : <div style={{backgroundColor:`${apiId.colors}`}} className="color"></div>
             }
           </div>
         </div>
@@ -86,7 +100,7 @@ const SingleTextPage = ({apiId}) => {
           <div style={{fontSize:'1.7rem', fontWeight:'700', color:'#7843dbc8'}} className="quantityIcon"> {quantity} </div>
           <div className="quantityIcon" onClick={handlePlus} style={{fontWeight:'900', fontSize:'2rem'}} >+</div>
         </div>
-        <button className="cartBtn" onClick={() => dispatch({type : "Add to Cart", payload : apiId})} >ADD TO CART</button>
+        <button className="cartBtn" onClick={() => dispatch({type : "Add to Cart", load : apiId})} >ADD TO CART</button>
       </section>
     </>
   );

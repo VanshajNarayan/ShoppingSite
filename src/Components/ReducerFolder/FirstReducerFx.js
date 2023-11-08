@@ -19,10 +19,27 @@ export const FirstReducerFx = (state, action) => {
 
       // eslint-disable-next-line
     case "Add to Cart":
-      const baskets = [...state.cartBucket, action.payload];
+      const {cartBucket } = state;
+      const baskets = [...cartBucket, action.load];
       return {
         ...state,
         cartBucket: baskets,
+      };
+
+      // eslint-disable-next-line
+    case "deleteItems":
+      const deletedItems = state.cartBucket.filter((products) => products.id !== action.CartItems.id);
+      return {
+        ...state,
+        cartBucket: deletedItems,
+      };
+
+      // eslint-disable-next-line
+    case "clearChart":
+      const clearChart = [];
+      return {
+        ...state,
+        cartBucket: clearChart,
       };
 
       // eslint-disable-next-line
