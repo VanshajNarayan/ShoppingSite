@@ -5,15 +5,18 @@ import FormatPrice from "../HelperFolder/FormatPrice";
 
 const CartPage = ({ cartItems }) => {
   let [itemQuantity, setItemQuantity] = useState(cartItems.ItemQuatity);
+  let [subTotal, setSubTotal] = useState(cartItems.price * cartItems.ItemQuatity);
   const dispatch = useGetDispatch();
   const handleItemMinus = () => {
     if (itemQuantity > 1) {
       setItemQuantity(--itemQuantity);
+      setSubTotal(subTotal - cartItems.price);
     }
   };
   const handleItemPlus = () => {
     if (itemQuantity < 5) {
       setItemQuantity(++itemQuantity);
+      setSubTotal(subTotal + cartItems.price);
     }
   };
   return (
@@ -37,7 +40,7 @@ const CartPage = ({ cartItems }) => {
             </div>
           </div>
         </div>
-        <p className="cartItems gridCenter"> { <FormatPrice price = {cartItems.price} />} </p>
+        <p className="cartItems gridCenter"> { <FormatPrice price = {subTotal} />} </p>
         <div
           className="cartItems gridCenter"
           style={{
