@@ -9,8 +9,8 @@ const Cart = () => {
   const dispatch = useGetDispatch();
   const handleClearChart = () => {
     dispatch({ type: "clearChart" });
+    state.totalAmount = 0;
   };
-  const totalAmount = state.cartBucket.reduce((accumulator, currentValue) => accumulator.price + currentValue, 0);
   return (
     <>
       <section className="cartSection">
@@ -36,10 +36,10 @@ const Cart = () => {
         </div>
         <div className="totalBox">
           <div className="totalDetail">
-            <p>subTotal : <span> { <FormatPrice price = {totalAmount} />} </span></p>
+            <p>subTotal : <span> { <FormatPrice price = {state.totalAmount} />} </span></p>
             <p>shipping fee : <span> { <FormatPrice price = {5000} />} </span></p>
             <hr />
-            <p>Oder Total : <span> { <FormatPrice price = {totalAmount + 5000} />} </span></p>
+            <p>Oder Total : <span> { <FormatPrice price = {state.totalAmount + 5000} />} </span></p>
           </div>
         </div>
       </section>

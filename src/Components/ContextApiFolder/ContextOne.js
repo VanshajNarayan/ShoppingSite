@@ -1,4 +1,3 @@
-// import axios from "axios";
 import { createContext, useContext, useEffect, useReducer } from "react";
 import { FirstReducerFx } from "../ReducerFolder/FirstReducerFx";
 import ApiData from "../ApiFolder/ApiData";
@@ -14,12 +13,12 @@ export const Provider = ({ children }) => {
     allApiData: [],
     featureApiData : [],
     cartBucket : [],
+    totalAmount : 0,
   };
 
   const [state, dispatch] = useReducer(FirstReducerFx, initialState);
 
   const apiCalling = async () => {
-    // const { data } = await axios.get(ApiData);
     dispatch({ type: "load", payload: ApiData });
     dispatch({ type: "featureDataLoad" });
   };

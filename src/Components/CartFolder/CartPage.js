@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MdDelete } from "react-icons/md";
 import { useGetDispatch } from "../ContextApiFolder/ContextOne";
 import FormatPrice from "../HelperFolder/FormatPrice";
@@ -19,13 +19,18 @@ const CartPage = ({ cartItems }) => {
       setSubTotal(subTotal + cartItems.price);
     }
   };
+  useEffect(() => { 
+    cartItems.subTotalAmount = subTotal;
+    dispatch({ type: "AddSubTotal" });
+    // eslint-disable-next-line
+  }, [itemQuantity])
   return (
     <>
       <div className="cartItemsBox">
         <div className="cartItems cartItemsOne">
           <div className="ItemsImage">
             <img
-              src={cartItems.image[0].url}
+              src={cartItems.images[0].url}
               alt="Iphone Mobile"
               width="100%"
             />
@@ -40,7 +45,7 @@ const CartPage = ({ cartItems }) => {
             </div>
           </div>
         </div>
-        <p className="cartItems gridCenter"> { <FormatPrice price = {subTotal} />} </p>
+        <p className="cartItems gridCenter"> { <FormatPrice price = {cartItems.price} />} </p>
         <div
           className="cartItems gridCenter"
           style={{
@@ -60,12 +65,15 @@ const CartPage = ({ cartItems }) => {
             +
           </span>
         </div>
-        <p className="cartItems gridCenter"> { <FormatPrice price = {cartItems.price} />} </p>
+        <p className="cartItems gridCenter"> { <FormatPrice price = {subTotal} />} </p>
         <p
           className="cartItems gridCenter"
           style={{ color: "red", fontSize: "2rem", cursor: "pointer" }}
           onClick={() =>
-            dispatch({ type: "deleteItems", CartItems: cartItems })
+          {
+            dispatch({ type: "deleteItems", CartItems: cartItems });
+            dispatch({ type: "AddSubTotal" })
+          }
           }>
           <MdDelete />
         </p>
