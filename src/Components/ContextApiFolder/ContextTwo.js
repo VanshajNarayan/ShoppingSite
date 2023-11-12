@@ -1,6 +1,7 @@
-import axios from "axios";
+// import axios from "axios";
 import { createContext, useContext, useEffect, useReducer } from "react";
 import { SecondReduerFx } from "../ReducerFolder/SecondReducerFx";
+import ApiData from "../ApiFolder/ApiData";
 
 
 export const secondData = createContext();
@@ -16,8 +17,8 @@ export const SecondProvider = ({ children }) => {
   const [state, dispatch] = useReducer(SecondReduerFx, initialState);
 
   const secondApi = async () => {
-    const { data } = await axios.get("https://api.pujakaitem.com/api/products");
-    dispatch({ type: "loadSecondApi", payload: data });
+    // const { data } = await axios.get(ApiData);
+    dispatch({ type: "loadSecondApi", payload: ApiData });
   };
 
   useEffect(() => {
