@@ -2,6 +2,7 @@
 export const FirstReducerFx = (state, action) => {
   switch (action.type) {
 
+    // eslint-disable-next-line
     case "load":
       return {
         ...state,
@@ -9,6 +10,7 @@ export const FirstReducerFx = (state, action) => {
         allApiData: action.payload,
       };
 
+      // eslint-disable-next-line
     case "featureDataLoad": 
       const featuredItems = state.allApiData.filter((items) => items.featured === true);
       return {
@@ -21,6 +23,8 @@ export const FirstReducerFx = (state, action) => {
     case "Add to Cart":
       const {cartBucket } = state;
       const baskets = [...cartBucket, action.load];
+      const subAmount = action.load.price * action.quatity;
+      action.load.subTotal = subAmount;
       return {
         ...state,
         cartBucket: baskets,
@@ -28,10 +32,12 @@ export const FirstReducerFx = (state, action) => {
 
       // eslint-disable-next-line
     case "deleteItems":
-      const deletedItems = state.cartBucket.filter((products) => products.id !== action.CartItems.id);
+      const deletedItems = state.cartBucket.filter((products) => products?.id !== action.CartItems?.id);
+      const totalPrice = deletedItems.reduce((accumulator, currentValue) => accumulator + currentValue.subTotalAmount, 0);
       return {
         ...state,
         cartBucket: deletedItems,
+        totalAmount : totalPrice,
       };
 
       // eslint-disable-next-line
@@ -43,6 +49,13 @@ export const FirstReducerFx = (state, action) => {
       };
 
       // eslint-disable-next-line
+    case "quatityminus":
+      if (action.cartMenu.ItemQuatity > 1) {
+        let minusQuantity = action.cartMenu.ItemQuatity - 1;
+        action.cartMenu.ItemQuatity = minusQuantity;
+      };
+
+      // eslint-disable-next-line
     case "AddSubTotal":
       if (state.cartBucket.length >= 1) {
         const totalPrice = state.cartBucket.reduce((accumulator, currentValue) => accumulator + currentValue.subTotalAmount, 0);
@@ -50,6 +63,13 @@ export const FirstReducerFx = (state, action) => {
           ...state,
           totalAmount : totalPrice,
         }
+      };
+
+      // eslint-disable-next-line
+    case "quatityplus":
+      if (action.cartMenu.ItemQuatity < 5) {
+        let plusQuantity = action.cartMenu.ItemQuatity + 1;
+        action.cartMenu.ItemQuatity = plusQuantity;
       };
 
       // eslint-disable-next-line

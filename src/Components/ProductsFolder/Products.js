@@ -6,6 +6,7 @@ import SelectOption from "./SelectOption";
 import Category from "./Category";
 import { useState } from "react";
 import { useSecondData } from "../ContextApiFolder/ContextTwo";
+import ApiData from "../ApiFolder/ApiData";
 
 const Products = () => {
   const [inputValue, setInputValue] = useState("");
@@ -114,7 +115,7 @@ const Products = () => {
           <div className="photoGalleyBox">
             <div className="firstSection">
               <p style={{ fontSize: "1.5rem", marginBottom: "0.5rem", color:'#000' }}>
-                {allApiData.length} total products
+                {typeof allApiData?.length === "number" ? allApiData?.length : ApiData?.length } total products
               </p>
               <div className="optionSelect">
                 <SelectOption options={alphabeticalOption} heading = {pFilter} />

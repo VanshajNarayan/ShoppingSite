@@ -1,11 +1,15 @@
+import ApiData from "../ApiFolder/ApiData";
 import FormatPrice from "../HelperFolder/FormatPrice";
 import { NavLink } from "react-router-dom";
 
 const FeatureGallery = ({ productApi }) => {
+  if (productApi === undefined) {
+    productApi = ApiData;
+  };
   return (
     <>
       {
-            productApi.map((data, index) => (
+            productApi?.map((data, index) => (
               <NavLink to={`/singleProducts/${data.id}`} style={{textDecoration:'none'}} key={index} >
               
               <div className="firstBox">

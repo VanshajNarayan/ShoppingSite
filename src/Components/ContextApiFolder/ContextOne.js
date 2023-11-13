@@ -9,7 +9,7 @@ export const getDispatch = createContext(null);
 export const Provider = ({ children }) => {
 
   const initialState = {
-    loading: "false",
+    loading: false,
     allApiData: [],
     featureApiData : [],
     cartBucket : [],
@@ -25,7 +25,7 @@ export const Provider = ({ children }) => {
 
   useEffect(() => {
     apiCalling();
-  }, [])
+  }, [state.cartBucket.ItemQuatity])
 
   return (
     <getData.Provider value={state}>

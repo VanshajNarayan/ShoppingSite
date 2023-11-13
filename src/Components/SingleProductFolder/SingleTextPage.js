@@ -100,7 +100,7 @@ const SingleTextPage = ({apiId}) => {
           <div style={{fontSize:'1.7rem', fontWeight:'700', color:'#7843dbc8'}} className="quantityIcon"> {quantity} </div>
           <div className="quantityIcon" onClick={handlePlus} style={{fontWeight:'900', fontSize:'2rem'}} >+</div>
         </div>
-        <button className="cartBtn" onClick={() => dispatch({type : "Add to Cart", load : apiId})} >ADD TO CART</button>
+        <button className="cartBtn" onClick={() => dispatch({type : "Add to Cart", load : apiId, quatity : quantity})} >ADD TO CART</button>
       </section>
     </>
   );
