@@ -25,6 +25,9 @@ export const FirstReducerFx = (state, action) => {
       const baskets = [...cartBucket, action.load];
       const subAmount = action.load.price * action.quatity;
       action.load.subTotal = subAmount;
+      if (typeof action.load.colors === "object") {
+        action.load.colors = "#000";
+      };
       return {
         ...state,
         cartBucket: baskets,
