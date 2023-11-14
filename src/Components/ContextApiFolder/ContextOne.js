@@ -6,15 +6,6 @@ import ApiData from "../ApiFolder/ApiData";
 export const getData = createContext(null);
 export const getDispatch = createContext(null);
 
-// function getLocalStorage() {
-//   const localCartData = JSON.parse(localStorage.getItem("vanscart"));
-//   if (localCartData.length ===  0) {
-//     return [];
-//   } else {
-//     return localCartData;
-//   };
-// };
-
 export const Provider = ({ children }) => {
 
   const initialState = {
@@ -35,11 +26,6 @@ export const Provider = ({ children }) => {
   useEffect(() => {
     apiCalling();
   }, [])
-
-  // useEffect(() => { 
-  //   localStorage.setItem("vanscart", JSON.stringify(state.cartBucket));
-  //   // eslint-disable-next-line
-  // }, [state.cartBucket]);
 
   return (
     <getData.Provider value={state}>
