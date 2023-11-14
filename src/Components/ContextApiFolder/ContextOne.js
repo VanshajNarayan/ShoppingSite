@@ -6,14 +6,14 @@ import ApiData from "../ApiFolder/ApiData";
 export const getData = createContext(null);
 export const getDispatch = createContext(null);
 
-function getLocalStorage() {
-  const localCartData = JSON.parse(localStorage.getItem("vanscart"));
-  if (localCartData.length ===  0) {
-    return [];
-  } else {
-    return localCartData;
-  };
-};
+// function getLocalStorage() {
+//   const localCartData = JSON.parse(localStorage.getItem("vanscart"));
+//   if (localCartData.length ===  0) {
+//     return [];
+//   } else {
+//     return localCartData;
+//   };
+// };
 
 export const Provider = ({ children }) => {
 
@@ -21,7 +21,7 @@ export const Provider = ({ children }) => {
     loading: false,
     allApiData: [],
     featureApiData : [],
-    cartBucket : getLocalStorage(),
+    cartBucket : [],
     totalAmount : 0,
   };
 
@@ -36,10 +36,10 @@ export const Provider = ({ children }) => {
     apiCalling();
   }, [])
 
-  useEffect(() => { 
-    localStorage.setItem("vanscart", JSON.stringify(state.cartBucket));
-    // eslint-disable-next-line
-  }, [state.cartBucket]);
+  // useEffect(() => { 
+  //   localStorage.setItem("vanscart", JSON.stringify(state.cartBucket));
+  //   // eslint-disable-next-line
+  // }, [state.cartBucket]);
 
   return (
     <getData.Provider value={state}>
