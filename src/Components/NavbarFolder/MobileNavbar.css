@@ -1,5 +1,6 @@
 .mobileNav{
   position: relative;
+  z-index: 1;
 }
 
 .item{
@@ -9,13 +10,13 @@
   margin: 0 auto;
   text-align: center;
   width: 100%;
-  background-image: linear-gradient(rgb(119, 67, 219), rgba(120, 67, 219, 0.732));
+  background-color: rgba(231, 230, 230, 0.865);
 }
 
 .item li .anchor{
   display: block;
   text-decoration: none;
-  color: #fff;
+  color: #000;
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 0.1rem;
@@ -25,10 +26,6 @@
 .item li a:hover{
   color: #000;
   transform: all linear 0.5s;
-  -webkit-transform: all linear 0.5s;
-  -moz-transform: all linear 0.5s;
-  -ms-transform: all linear 0.5s;
-  -o-transform: all linear 0.5s;
 }
 
 .item li .cartIcon{
@@ -40,6 +37,10 @@
   font-size: 1.3rem;
   position: absolute;
   top: 0%;
+}
+
+.item li .active{
+  color: #7743DB;
 }
 
 @media(width > 768px){

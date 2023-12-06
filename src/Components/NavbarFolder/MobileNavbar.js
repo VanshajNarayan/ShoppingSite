@@ -9,7 +9,7 @@ const MobileNavbar = ({showHidden, setShowHidden}) => {
     <>
     <div className="mobileNav">
       <ul className="item" onClick={() => setShowHidden(!showHidden)} >
-        <li>
+        <li className="active">
           <NavLink to="/" className="anchor" >HOME</NavLink>
         </li>
         <li>

@@ -15,7 +15,7 @@ const Navbar = () => {
         <div className="navbar_container">
           <div className="logo"> Vanshaj Store</div>
           <ul className="items">
-            <li>
+            <li className="active">
               <NavLink to="/">HOME</NavLink>
             </li>
             <li>
